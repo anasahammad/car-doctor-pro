@@ -23,7 +23,7 @@ const SignUp = () => {
         }
         console.log(newUser);
 
-        const res = await fetch('http://localhost:3000/signup/api', {
+        const res = await fetch(`${process.env.BASE_URL}/signup/api`, {
             method : 'POST',
             headers : {
                 'Content-Type' : 'application/json'

@@ -10,7 +10,7 @@ const UpdatePage = ({params}) => {
     const [booking, setBooking] = useState()
     const router = useRouter()
     const loadBooking = async ()=>{
-        const res = await fetch(`http://localhost:3000/my-bookings/api/delete-booking/${params.id}`)
+        const res = await fetch(`${process.env.BASE_URL}/my-bookings/api/delete-booking/${params.id}`)
         const data = await res.json()
         setBooking(data.response)
         
@@ -26,7 +26,7 @@ const UpdatePage = ({params}) => {
             date : event.target.date.value
         }
 
-       const res = await fetch(`http://localhost:3000/my-bookings/api/delete-booking/${params.id}`, {
+       const res = await fetch(`${process.env.BASE_URL}/my-bookings/api/delete-booking/${params.id}`, {
         method: "PATCH",
         headers: {
             "content-type": "application/json"

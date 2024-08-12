@@ -32,7 +32,7 @@ const [service, setService] = useState({})
 
         console.log(newBooking);
 
-        const res = await fetch('http://localhost:3000/checkout/api/new-booking', {
+        const res = await fetch(`http://localhost:3000/checkout/api/new-booking`, {
             method : 'POST',
             headers : {
                 'Content-Type' : 'application/json'
